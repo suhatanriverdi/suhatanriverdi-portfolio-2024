@@ -4,8 +4,8 @@ import Project from "../components/project.astro";
 ---
 
 <Main>
-  <section class="max-w-[60rem] w-full px-6 mt-[10vh]">
-    <div class="flex justify-between items-center mb-[5rem]">
+  <section class="max-w-[60rem] w-full px-6 max-sm:mt-[5vh] mt-[10vh]">
+    <div class="flex justify-between items-center mb-[2rem]">
       <div>
         <h1 class="font-semibold text-3xl sm:text-4xl md:text-6xl mb-4">
           Projects
@@ -15,35 +15,22 @@ import Project from "../components/project.astro";
         </p>
       </div>
     </div>
-    <div class="flex flex-col max-sm:items-center max-sm:gap-y-[2rem] gap-y-[5rem] mb-[5rem]">
-      <div
-        class="flex flex-col gap-3 justify-center items-start w-[25rem] border-dashed border rounded-3xl shadow-sm p-6 border-specialCyan"
-      >
-        <Project src="/public/images/eriste.jpg" />
-        <h1 class="font-normal text-xl">Landing Page</h1>
-        <p class="text-sm text-justify">
-          I designed this responsive landing page in Figma for my family’s
-          handmade product business. The goal was to create a clean, simple, and
-          user-friendly design. With a mobile-first approach, clear sections,
-          and engaging visuals, this design ensures a seamless experience across
-          all devices.
-        </p>
-      </div>
-      <div
-        class="flex flex-col gap-2 justify-center items-start w-[25rem] border-dashed border rounded-3xl shadow-sm p-6 border-specialCyan"
-      >
-        <Project
-          src="https://private-user-images.githubusercontent.com/36234545/274931386-996197c5-4aa5-493e-9605-ca9f4a274377.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjgwNTQzMDYsIm5iZiI6MTcyODA1NDAwNiwicGF0aCI6Ii8zNjIzNDU0NS8yNzQ5MzEzODYtOTk2MTk3YzUtNGFhNS00OTNlLTk2MDUtY2E5ZjRhMjc0Mzc3LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDA0VDE1MDAwNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTNmMGMwN2VkNTFiOWZiMDM4M2ExNmMzZTg2M2U4MGMwODMwNGExN2M0MjY4Y2QyNmVmZGVkNTQwZGNmYmUxMDkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.QyqApcehXQtxlIwO50hf_nMl4mJ0sGJu6pzEw6aUepI"
-        />
-        <h1 class="font-normal text-xl">
-          FarmStand CRUD with Bulma, Express, EJS, Mongo-Web-App
-        </h1>
-        <p class="text-sm text-justify">
-          This is a basic create, read, update, delete (CRUD) operations example
-          in pure HTML, Bulma CSS, JS, EJS, NodeJS, and ExpressJS with Mongoose,
-          and MongoDB.
-        </p>
-      </div>
+    <div
+      class="flex flex-wrap max-sm:items-center justify-between max-sm:gap-[2rem] gap-[2rem] mb-[5rem]"
+    >
+      <Project
+        websiteLink="https://guldereneriste.netlify.app"
+        githubLink="https://github.com/shtanriverdi/Landing-Page-Eriste"
+        src="/public/images/eriste.jpg"
+        title="Landing Page"
+        description="I designed this responsive landing page in Figma for my family’s handmade product business. The goal was to create a clean, simple, and user-friendly design. With a mobile-first approach, clear sections, and engaging visuals, this design ensures a seamless experience across all devices."
+      />
+      <Project
+        githubLink="https://github.com/shtanriverdi/FarmStand-CRUD-with-Bulma-Express-EJS-Mongo-Web-App?tab=readme-ov-file"
+        src="https://private-user-images.githubusercontent.com/36234545/274931386-996197c5-4aa5-493e-9605-ca9f4a274377.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjgwNTQzMDYsIm5iZiI6MTcyODA1NDAwNiwicGF0aCI6Ii8zNjIzNDU0NS8yNzQ5MzEzODYtOTk2MTk3YzUtNGFhNS00OTNlLTk2MDUtY2E5ZjRhMjc0Mzc3LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDA0VDE1MDAwNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTNmMGMwN2VkNTFiOWZiMDM4M2ExNmMzZTg2M2U4MGMwODMwNGExN2M0MjY4Y2QyNmVmZGVkNTQwZGNmYmUxMDkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.QyqApcehXQtxlIwO50hf_nMl4mJ0sGJu6pzEw6aUepI"
+        title="FarmStand CRUD with Bulma, Express, EJS, Mongo-Web-App"
+        description="This is a basic create, read, update, delete (CRUD) operations example in pure HTML, Bulma CSS, JS, EJS, NodeJS, and ExpressJS with Mongoose, and MongoDB."
+      />
     </div>
   </section>
 </Main>

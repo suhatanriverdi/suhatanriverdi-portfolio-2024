@@ -1,12 +1,36 @@
 ---
 import Image from "astro/components/Image.astro";
+import Link from "../icons/link.astro";
+import Github from "../icons/github.astro";
 const src = Astro.props.src;
+const title = Astro.props.title;
+const description = Astro.props.description;
+const websiteLink = Astro.props.websiteLink;
+const githubLink = Astro.props.githubLink;
 ---
 
-<Image
-  class="object-contain rounded-2xl border shadow-sm"
-  width="1000"
-  height="1000"
-  src={src}
-  alt="thumbnail"
-/>
+<div
+  class="flex flex-col gap-3 items-start w-[26rem] h-max border-dashed border rounded-3xl shadow-sm p-6 border-specialCyan"
+>
+  <Image
+    class="object-contain rounded-2xl border shadow-sm"
+    width="1000"
+    height="1000"
+    src={src}
+    alt="thumbnail"
+  />
+  <h1 class="font-normal text-xl">{title}</h1>
+  <p class="text-sm text-justify">
+    {description}
+  </p>
+  <div class="flex self-end gap-3">
+    <a target="_blank" href={githubLink}><Github size="2rem" /></a>
+    {
+      websiteLink && (
+        <a target="_blank" href={websiteLink}>
+          <Link size="2rem" />
+        </a>
+      )
+    }
+  </div>
+</div>
