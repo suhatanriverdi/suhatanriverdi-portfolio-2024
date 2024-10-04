@@ -4,3 +4,7 @@
   color: rgba(0, 32, 52, 0.876);
   user-select: none;
 }
+
+a:hover {
+    color: rgba(30, 115, 146, 0.876);
+}
