@@ -1,0 +1,16 @@
+---
+import Image from "astro/components/Image.astro";
+const w = Astro.props.w;
+const h = Astro.props.h;
+const src = Astro.props.src;
+---
+
+<div class="max-w-[10rem]">
+  <Image
+    class="w-full h-auto object-contain rounded-3xl shadow-lg"
+    width={w}
+    height={h}
+    src={src}
+    alt="thumbnail"
+  />
+</div>
