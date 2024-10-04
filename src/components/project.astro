@@ -7,6 +7,7 @@ const title = Astro.props.title;
 const description = Astro.props.description;
 const websiteLink = Astro.props.websiteLink;
 const githubLink = Astro.props.githubLink;
+const tools = Astro.props.tools;
 ---
 
 <div
@@ -22,6 +23,9 @@ const githubLink = Astro.props.githubLink;
   <h1 class="font-normal text-xl">{title}</h1>
   <p class="text-sm text-justify">
     {description}
+  </p>
+  <p class="italic font-light text-xs">
+    {tools}
   </p>
   <div class="flex self-end gap-3">
     <a target="_blank" href={githubLink}><Github size="2rem" /></a>
