@@ -6,7 +6,7 @@ export default {
       colors: {
         specialCyan: "#cce4e6",
         specialCyanLight: "#adf1f7",
-        primary: "#002034df",
+        primary: "#195358",
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-out",
