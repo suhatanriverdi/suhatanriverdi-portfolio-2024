@@ -16,10 +16,11 @@ import Footer from "../pages/footer.astro";
     <link rel="stylesheet" href="/styles/global.css" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script src="src/ts/toggleDarkLightMode.ts" defer></script>
     <title>Süha Tanrıverdi</title>
   </head>
   <body
-    class="text-[#195358] flex flex-col items-center h-[calc(100vh-70px)]"
+    class="text-[#195358] dark:bg-[#121212] dark:text-cyan-50 dark:[text-shadow:_0_0_20px_rgba(255_255_255_/_0.25)] flex flex-col items-center h-[calc(100vh-70px)]"
   >
     <Navbar />
     <slot />
