@@ -11,8 +11,9 @@ const tools = Astro.props.tools;
 ---
 
 <div
-  class="flex flex-col gap-3 items-start w-[26rem] max-[911px]:w-[40rem] h-max border-dashed border dark:border-cyan-500 rounded-3xl shadow-md dark:shadow-md dark:shadow-cyan-900 shadow-cyan-700/10 p-6 border-specialCyan"
+  class="flex flex-col gap-3 items-start w-[26rem] max-[911px]:w-[40rem] h-max border-dashed border dark:border-cyan-50 rounded-3xl shadow-md dark:shadow-md dark:shadow-cyan-50/10 shadow-cyan-700/10 p-6 border-specialCyan"
 >
+  <!-- <Loader /> -->
   <Image
     class="object-contain rounded-2xl border shadow-sm dark:shadow-sm dark:shadow-cyan-900"
     width="1000"
@@ -20,6 +21,7 @@ const tools = Astro.props.tools;
     src={src}
     alt="thumbnail"
   />
+
   <h1 class="text-xl">{title}</h1>
   <p class="text-sm text-justify">
     {description}
