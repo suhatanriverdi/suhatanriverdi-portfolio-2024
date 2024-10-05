@@ -2,11 +2,13 @@
 import Image from "astro/components/Image.astro";
 import Link from "../icons/link.astro";
 import Github from "../icons/github.astro";
+import Figma from "../icons/figma.astro";
 const src = Astro.props.src;
 const title = Astro.props.title;
 const description = Astro.props.description;
 const websiteLink = Astro.props.websiteLink;
 const githubLink = Astro.props.githubLink;
+const figmaLink = Astro.props.figmaLink;
 const tools = Astro.props.tools;
 ---
 
@@ -35,6 +37,13 @@ const tools = Astro.props.tools;
       websiteLink && (
         <a target="_blank" href={websiteLink}>
           <Link size="2rem" />
+        </a>
+      )
+    }
+    {
+      figmaLink && (
+        <a target="_blank" href={figmaLink}>
+          <Figma size="2rem" />
         </a>
       )
     }
