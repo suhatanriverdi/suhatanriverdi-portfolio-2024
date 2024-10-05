@@ -16,7 +16,6 @@ import Footer from "../pages/footer.astro";
     <link rel="stylesheet" href="/styles/global.css" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <script src="src/ts/toggleDarkLightMode.ts" defer></script>
     <title>Süha Tanrıverdi</title>
   </head>
   <body
@@ -27,3 +26,63 @@ import Footer from "../pages/footer.astro";
     <Footer />
   </body>
 </html>
+
+<script>
+  // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+  if (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+
+  // // // Whenever the user explicitly chooses light mode
+  // // localStorage.theme = "light";
+
+  // // // Whenever the user explicitly chooses dark mode
+  // // localStorage.theme = "dark";
+
+  // // // Whenever the user explicitly chooses to respect the OS preference
+  // // localStorage.removeItem("theme");
+
+  //   Theme toggle logic
+  const darkBtn = document.getElementById("dark");
+  const lightBtn = document.getElementById("light");
+  updateButtonVisibility();
+
+  darkBtn?.addEventListener("click", function () {
+    toggleTheme();
+    updateButtonVisibility();
+  });
+
+  lightBtn?.addEventListener("click", function () {
+    toggleTheme();
+    updateButtonVisibility();
+  });
+
+  function updateButtonVisibility() {
+    // Make the lightBtn button visible
+    if (localStorage.theme === "dark") {
+      lightBtn!.classList.remove("hidden");
+      darkBtn!.classList.add("hidden");
+    }
+    // Make the darkBtn button visible
+    if (localStorage.theme === "light") {
+      darkBtn!.classList.remove("hidden");
+      lightBtn!.classList.add("hidden");
+    }
+  }
+
+  function toggleTheme() {
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+    }
+  }
+</script>

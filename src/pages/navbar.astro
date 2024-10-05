@@ -1,7 +1,7 @@
 ---
 import DarkMode from "../icons/dark-mode.astro";
 import LightMode from "../icons/light-mode.astro";
-import Lang from "../icons/lang.astro";
+// import Lang from "../icons/lang.astro";
 ---
 
 <nav class="max-w-[60rem] px-6 py-8 w-full flex justify-between items-center">
@@ -9,7 +9,8 @@ import Lang from "../icons/lang.astro";
   <ul class="flex gap-4">
     <a href="/">Home</a>
     <a href="/projects">Projects</a>
-    <a id="theme-toggle" href="#"><DarkMode size="1.6rem" /></a>
+    <a class="hidden" id="dark" href="#"><DarkMode size="1.6rem" /></a>
+    <a class="hidden" id="light" href="#"><LightMode size="1.6rem" /></a>
     <!-- <a href="#"><Lang size="1.6rem" /></a> -->
   </ul>
 </nav>
