@@ -3,12 +3,14 @@ import Image from "astro/components/Image.astro";
 import Link from "../icons/link.astro";
 import Github from "../icons/github.astro";
 import Figma from "../icons/figma.astro";
+import Npm from "../icons/npm.astro";
 const src = Astro.props.src;
 const title = Astro.props.title;
 const description = Astro.props.description;
 const websiteLink = Astro.props.websiteLink;
 const githubLink = Astro.props.githubLink;
 const figmaLink = Astro.props.figmaLink;
+const npmLink = Astro.props.npmLink;
 const tools = Astro.props.tools;
 ---
 
@@ -32,6 +34,13 @@ const tools = Astro.props.tools;
     {tools}
   </p>
   <div class="flex self-end gap-3">
+    {
+      npmLink && (
+        <a target="_blank" href={npmLink}>
+          <Npm size="2rem" />
+        </a>
+      )
+    }
     <a target="_blank" href={githubLink}><Github size="2rem" /></a>
     {
       websiteLink && (
